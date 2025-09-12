@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing App</title>
+  <!-- Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f3f4f6;
+    }
+
+    #drawingCanvas {
+      background-color: #ffffff;
+      border: 2px solid #e5e7eb;
+      cursor: crosshair;
+      touch-action: none;
+      /* Prevents default touch gestures like scrolling */
+    }
+  </style>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+  <h1 class="text-3xl font-bold text-gray-800 mb-6">Drawing App</h1>
+
+  <!-- Controls -->
+  <div class="flex flex-wrap justify-center items-center space-x-2 mb-4">
+    <button id="clearBtn"
+      class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full shadow-md transition-colors duration-200">Clear</button>
+    <button id="color-black" class="w-8 h-8 rounded-full border-2 border-black"
+      style="background-color: black;"></button>
+    <button id="color-red" class="w-8 h-8 rounded-full border-2 border-transparent hover:border-black"
+      style="background-color: #ef4444;"></button>
+    <button id="color-blue" class="w-8 h-8 rounded-full border-2 border-transparent hover:border-black"
+      style="background-color: #3b82f6;"></button>
+    <button id="color-green" class="w-8 h-8 rounded-full border-2 border-transparent hover:border-black"
+      style="background-color: #22c55e;"></button>
+    <button id="color-yellow" class="w-8 h-8 rounded-full border-2 border-transparent hover:border-black"
+      style="background-color: #eab308;"></button>
+  </div>
+
+  <!-- Drawing Canvas -->
+  <canvas id="drawingCanvas" width="800" height="600" class="rounded-xl shadow-lg"></canvas>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
