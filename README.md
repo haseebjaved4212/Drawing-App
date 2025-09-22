@@ -115,4 +115,4 @@ No JS change needed; the listener uses `[id^="color-"]` to auto-detect.
 
 —
 
-Made with ❤️ by You
+Made with ❤️ 
